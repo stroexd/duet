@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "duet-lokal"
+version = "0.2.0"
+description = "Duet als Claude-Code-Plugin: proaktive Routinen, Freigaben und Telegram-Rückkanal (MCP-Server + Hook)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "mcp>=2.3",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[project.scripts]
+duet-mcp = "duet.mcp_server:main"
+duet-hook = "duet.hook:main"
+duet-setup = "duet.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["duet*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = ["slow: End-to-End-Tests (baut eine venv, nutzt lokale Ports); abwählen mit -m 'not slow'"]

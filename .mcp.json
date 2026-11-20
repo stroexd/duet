@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "duet": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "${CLAUDE_PLUGIN_ROOT}",
+        "duet-mcp"
+      ],
+      "timeout": 1200000
+    }
+  }
+}

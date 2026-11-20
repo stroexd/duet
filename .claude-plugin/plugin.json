@@ -1,0 +1,11 @@
+{
+  "name": "duet",
+  "displayName": "Duet",
+  "version": "0.2.0",
+  "description": "Proaktiver Assistent nach dem Vorbild von Claude Duet: Heartbeat- und Briefing-Routinen, Freigaben per Telegram-Button, Rückkanal aufs Handy.",
+  "author": { "name": "stroexd" },
+  "repository": "https://github.com/stroexd/duet",
+  "license": "MIT",
+  "keywords": ["assistant", "telegram", "routines", "approvals", "heartbeat"],
+  "network": { "hosts": ["api.telegram.org", "ntfy.sh"] }
+}

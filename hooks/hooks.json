@@ -1,0 +1,24 @@
+{
+  "description": "Duet-Freigabestufen: prüft jeden Tool-Aufruf (lesen/entwerfen automatisch, senden/zahlen/löschen nur nach Freigabe, Geld bewegen blockiert).",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uvx",
+            "args": [
+              "--from",
+              "${CLAUDE_PLUGIN_ROOT}",
+              "duet-hook",
+              "--source",
+              "plugin"
+            ],
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}

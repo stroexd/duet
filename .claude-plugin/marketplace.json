@@ -1,0 +1,12 @@
+{
+  "name": "duet-lokal",
+  "description": "Marketplace für das Duet-Plugin (proaktiver Assistent mit Telegram-Rückkanal).",
+  "owner": { "name": "stroexd" },
+  "plugins": [
+    {
+      "name": "duet",
+      "source": "./",
+      "description": "Heartbeat- und Briefing-Routinen, Freigaben per Telegram, MCP-Server duet."
+    }
+  ]
+}
